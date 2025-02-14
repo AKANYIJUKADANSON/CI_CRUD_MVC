@@ -3,4 +3,5 @@
         <li style="margin-right: 10px;"><a href="/">Home</a></li>
         <li style="margin-right: 10px;"><a href="/about">About</a></li>
         <li style="margin-right: 10px;"><a href="/contacts">Contact</a></li>
+        <li style="margin-right: 10px;"><a href="/services">services</a></li>
 </nav>
