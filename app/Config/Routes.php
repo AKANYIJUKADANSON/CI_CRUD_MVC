@@ -29,6 +29,9 @@ $routes->get('news/new', [NewsController::class,'new']);
 $routes->post('news', [NewsController::class,'create']);
 $routes->get('news/(:segment)', [NewsController::class,'show']);
 
+// Delete route rule
+$routes->get('news/delete/(:segment)', [NewsController::class,'delete']);
+
 
 // Adding the route for the pages
 $routes->get('pages', [Pages::class, 'index']);

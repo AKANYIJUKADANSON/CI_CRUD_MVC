@@ -1,4 +1,4 @@
-<a style="align-items: center; text-decoration: none; font-weight: bolder; font-size: 20px; color: deepskyblue; display: flex; flex-direction: column;" href="<?php redirect()->to('news'); ?>">&#10005; </a>
+<a style="align-items: center; text-decoration: none; font-weight: bolder; font-size: 20px; color: deepskyblue; display: flex; flex-direction: column;" href="<?php redirect()->to('/news'); ?>">&#10005; </a>
 
 <div style="width: fit-content; justify-content: center; display: flex; border: 2px solid #e4f4f4; padding: 50px 100px; margin: auto; background-color: #f6f6f6;">
     <div style="align-items: center; color: green; display: flex; flex-direction: column;">

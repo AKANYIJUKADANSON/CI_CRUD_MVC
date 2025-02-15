@@ -25,5 +25,9 @@
         protected $allowedFields = ['title', 'slug', 'body', 'created_on'];
 
 
+        // Deleting a specific record using the id provided
+        public function deleteNews($slug){
+            return $this->where('id', $slug)->delete();
+        }
 
     }

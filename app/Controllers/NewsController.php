@@ -100,4 +100,25 @@
 
         }
 
+        // Deleting a specific item
+        public function delete($slug){
+            // Get the id of the news to delete
+            $model = model(NewsModel::class);
+        
+            // use the model to delete the news
+            $model->deleteNews($slug);
+        
+            
+            // Display the success page if a record is deleted
+            $data = [
+              'message' => 'Success',
+              'title' => 'Success'
+            ];
+        
+            return view('templates/header', $data)
+                    .view('news/success')
+                    .view('templates/footer');
+        
+          }
+
     }

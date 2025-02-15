@@ -24,6 +24,8 @@
           <td style="padding: 8px 5px; display: flex;">
             <a style="padding: 5px; background-color: green; color: white; text-decoration:none; border-radius: 4px; font-weight: bolder; margin-right: 10px"  href="/news/<?= esc($news['id'], 'url') ?>">View</a>
 
+            <a style="padding: 5px; background-color: red; color: white; text-decoration:none; border-radius: 4px; font-weight: bolder"  href="/news/delete/<?= esc($news['id'], 'url') ?>">Delete</a>
+
           </td>
         </tr>
       <?php
