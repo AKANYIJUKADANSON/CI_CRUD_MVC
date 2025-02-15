@@ -5,4 +5,5 @@
         <li style="margin-right: 10px;"><a href="/contacts">Contact</a></li>
         <li style="margin-right: 10px;"><a href="/services">services</a></li>
         <li style="margin-right: 10px;"><a href="/products">Products</a></li>
+        <li style="margin-right: 10px;"><a href="/news">News</a></li>
 </nav>
