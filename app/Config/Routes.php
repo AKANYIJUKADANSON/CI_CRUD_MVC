@@ -22,6 +22,11 @@ $routes->get('products', [ProductsController::class, 'index']);
  */
 // News route rule
 $routes->get('news/', [NewsController::class,'index']);
+
+// Posting form
+$routes->get('news/new', [NewsController::class,'new']);
+// Creating a post route rule
+$routes->post('news', [NewsController::class,'create']);
 $routes->get('news/(:segment)', [NewsController::class,'show']);
 
 

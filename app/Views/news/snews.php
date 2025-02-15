@@ -1,6 +1,6 @@
 
 Title: <?= esc($news_details['title']); ?>
 <br>
-Slug: <?= esc($news_details['slug']); ?>
-<br>
 Body: <?= esc($news_details['body']); ?>
+<br>
+Date of Creation: <?= esc($news_details['created_on']); ?>

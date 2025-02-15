@@ -21,5 +21,9 @@
         }
 
 
+        // Add allowed fields to add or update, id is auto-generated
+        protected $allowedFields = ['title', 'slug', 'body', 'created_on'];
+
+
 
     }
