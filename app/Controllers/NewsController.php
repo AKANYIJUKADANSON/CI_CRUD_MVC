@@ -119,6 +119,22 @@
                     .view('news/success')
                     .view('templates/footer');
         
-          }
+        }
+
+        // Loading the news form with the current data of the selected item to update
+        public function update($slug){
+
+            helper('form');
+            // Create instance of the newsmodel class
+            $model = model(NewsModel::class);
+        
+            // First load data to update from the datadase
+            $data = [
+              'itemToUpdate' => $model->getNews($slug),
+              'title' => 'Update News'
+            ];
+        
+            return view('news/update', $data);
+        }
 
     }

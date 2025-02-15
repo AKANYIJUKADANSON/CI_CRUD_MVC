@@ -32,6 +32,10 @@ $routes->get('news/(:segment)', [NewsController::class,'show']);
 // Delete route rule
 $routes->get('news/delete/(:segment)', [NewsController::class,'delete']);
 
+// Updating a record
+$routes->get('news/update/(:segment)', [NewsController::class, 'update']);
+
+
 
 // Adding the route for the pages
 $routes->get('pages', [Pages::class, 'index']);

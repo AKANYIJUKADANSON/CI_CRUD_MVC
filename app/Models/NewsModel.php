@@ -30,4 +30,9 @@
             return $this->where('id', $slug)->delete();
         }
 
+        // Updating a record
+        public function updateNews($slug){
+            return $this->where('id', $slug)->update();
+        }
+
     }
