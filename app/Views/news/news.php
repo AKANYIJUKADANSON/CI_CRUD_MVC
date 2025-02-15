@@ -16,6 +16,9 @@
           <td><?= esc($news['id']); ?></td>
           <td><?= esc($news['title']); ?></td>
           <td><?= esc($news['body']); ?></td>
+          <td>
+            <a style="padding: 5px; background-color: green; color: white; text-decoration:none; border-radius: 4px; font-weight: bolder; margin-right: 10px"  href="/news/<?= esc($news['id'], 'url') ?>">View</a>
+
           </td>
         </tr>
       <?php

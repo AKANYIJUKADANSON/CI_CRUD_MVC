@@ -21,4 +21,20 @@
             .view('news/news')
             .view('templates/footer');
         }
+
+        // displaying single news item
+        public function show(?string $id = null){
+            // Create the news model instance
+            $newsModel = model(NewsModel::class);
+
+            $data = [
+                'news_details' => $newsModel->getNews($id),
+                'title' => 'Single News Item'
+            ];
+
+            // return the views and templates and pass the data
+            return view('templates/header', $data)
+                    .view('news/snews')
+                    .view('templates/footer');
+        }
     }
