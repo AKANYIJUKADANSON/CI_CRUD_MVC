@@ -4,7 +4,7 @@
 <?= session()->getFlashdata('error') ?>
 <?= validation_list_errors() ?>
 
-<form action="/news/update" method="post">
+<form action="/news/dataUpdate/<?=esc($itemToUpdate['id']); ?>" method="post">
     <?= csrf_field() ?>
 
     <label style="font-size: 20px">Record ID: <span style="color: orangered; font-weight: bolder;"><?= esc($itemToUpdate['id']) ?></span></label><br><br>
@@ -12,7 +12,7 @@
     <input type="input" name="title" value="<?= esc($itemToUpdate['title']) ?>">
     <br><br>
 
-    <label for="body">Text</label>
+    <label for="body">Body</label>
     <textarea name="body" cols="45" rows="4"><?= esc($itemToUpdate['body']) ?></textarea>
     <br><br>
 
@@ -20,7 +20,7 @@
     <input type="date" name="created_on" value="<?= esc($itemToUpdate['created_on']) ?>">
     <br><br>
 
-    <input type="submit" name="submit" value="Create news item">
+    <input style="background-color: yellow; padding: 7px 10px; border-radius: 5px;" type="submit" name="submit" value="Update">
 
     
 </form>
