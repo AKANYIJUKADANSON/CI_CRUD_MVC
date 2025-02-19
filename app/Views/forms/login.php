@@ -3,10 +3,11 @@
 
 <h3 style="color: grey; text-align: center; ">LOGIN</h3>
 <div class="signupform" style="border: 10px solid grey; margin: auto; border-radius: 5px; width: fit-content; padding: 20px 40px; background-color: #bbbbbb;">
-    <?= form_open('forms/login') ?>
+    <?= form_open('forms/authenticate') ?>
+    <?= csrf_field() ?>
     <?= validation_list_errors() ?>
         <label for="">Username</label><br>
-        <input type="text" name="username" value="<?= esc($user_name) ?>"><br>
+        <input type="text" name="username" value="<?= set_value('username') ?>"><br>
 
         <label for="">Password</label><br>
         <input type="password" name="password" value="<?= set_value('password') ?>"><br>

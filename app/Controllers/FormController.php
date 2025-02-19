@@ -6,6 +6,12 @@ use App\Models\AuthModel;
 
     class FormController extends BaseController{
 
+        protected $session;
+
+        public function __construct() {
+            $this->session = \Config\Services::session();
+        }
+
         protected $helpers = ['form'];
 
         public function signup(){
@@ -59,23 +65,59 @@ use App\Models\AuthModel;
 
             // return the success page
             return view('/forms/login', $data);
-            
 
+        }
+
+        public function dashboard($data){
+            helper('form');
+            return view('templates/header', $data)
+                    .view('edms/dashboard');
         }
 
         public function login(){
             helper("form");
+            // helper("URL");
+            // return view('forms/signup', ['title'=> 'Sign Up']);
+            return view('templates/header', ['title' => 'Login'])
+            .view('forms/login')
+            .view('templates/footer');
+        }
 
+        public function authenticate(){
+
+            helper('form');
             // Check if the request method is post
-            if(!$this->request->is('post')){
-                // return view('forms/signup', ['title'=> 'Sign Up']);
-                return view('templates/header', ['title' => 'Sign Up'])
-                    .view('forms/signup')
-                    .view('templates/footer');
- 
-            }
+            if($this->request->is('post')){
 
-            // Capture the data
-            $user_data = $this->request->getPost();
+                // Capture the data
+                $user_data = $this->request->getPost();
+
+                // Get db users
+                $model = model(AuthModel::class);
+
+                
+                $db_user = $model->getUsers($user_data['username']);
+                if(empty($db_user)){
+                    echo 'User name does not exist';
+                }else{
+                    if($user_data['password'] != $db_user['password']){
+                        // echo 'Wrong password. Try again';
+                        echo 'Wrong password. Try again';
+                    }else{
+                        $data = [
+                            'authenticated_user'=> $db_user,
+                            'title'=> 'Dashboard'
+
+                        ];
+
+                        // If all the credentials are correct then, access the dashboard
+                    
+                        return $this->dashboard($data);
+                    }
+                }
+            }else{
+                echo "Method not allowed";
+            }
+            
         }
     }

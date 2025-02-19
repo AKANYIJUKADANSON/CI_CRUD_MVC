@@ -6,6 +6,7 @@ use App\Controllers\Pages;
 use App\Controllers\ServicesController;
 use App\Controllers\ProductsController;
 use App\Controllers\FormController;
+use App\Controllers\EDMSController;
 
 /**
  * @var RouteCollection $routes
@@ -78,4 +79,12 @@ $routes->get('forms/signup', 'FormController::signup');
 $routes->post('forms/signup', 'FormController::signup');
 
 $routes->get('forms/login', 'FormController::login');
-$routes->post('forms/login', 'FormController::login');
+$routes->post('forms/authenticate', 'FormController::authenticate');
+
+/**
+ * ------------------------------------------------------------
+ * ----------------- EDMS -------------------------------------
+ * ------------------------------------------------------------
+ */
+$routes->get('edms/dashboard', [FormController::class,'dashboard']);
+$routes->get('edms/dashboard', [EDMSController::class,'dashboard']);

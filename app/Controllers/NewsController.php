@@ -58,7 +58,7 @@
             // Load the form helper to access some of the form functions
             helper('form');
             // get the data for validation
-            $data = $this->request->getPost(['title', 'body']);
+            $data = $this->request->getPost(['title', 'body', 'created_on']);
             /**
              * Check if the data is validated and if not return to form input
              * validate() is a Controller-provided helper function
@@ -66,7 +66,7 @@
             if (! $this->validateData($data, [
             'title' => 'required|min_length[3]|max_length[255]',
             'body' => 'required|min_length[10]|max_length[5000]',
-            'created_on' => 'required|min_length[8]|max_length[10]',
+            'created_on' => 'required|min_length[10]|max_length[10]',
             ])){
                 /**
                  * Return the user to the form input page using the new()
@@ -159,7 +159,6 @@
             $model = model(NewsModel::class);
             // do the update using the updateNews method
             $model->updateNews($slug, $updated_data);
-            // return redirect()->to('http://localhost:8080/news');
             return $this->index();
         }
 
