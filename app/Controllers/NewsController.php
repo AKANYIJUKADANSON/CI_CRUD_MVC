@@ -55,32 +55,30 @@
 
         // Method/function to capture the data, validte and store it in the database
         public function create(){
-
             // Load the form helper to access some of the form functions
             helper('form');
-
             // get the data for validation
-            // $data = $this->request->getPost(['title', 'body']);
-
-            // Check if the data is validated and if not redirect them to form for input
-            // validate() is a Controller-provided helper function
-            if (! $this->validate([
+            $data = $this->request->getPost(['title', 'body']);
+            /**
+             * Check if the data is validated and if not return to form input
+             * validate() is a Controller-provided helper function
+             */
+            if (! $this->validateData($data, [
             'title' => 'required|min_length[3]|max_length[255]',
             'body' => 'required|min_length[10]|max_length[5000]',
             'created_on' => 'required|min_length[8]|max_length[10]',
             ])){
-
-                // Return the user to the form input page using the new() method in case the validation is not correct
+                /**
+                 * Return the user to the form input page using the new()
+                 * method in case the validation is not correct
+                */
                 return $this->new();
             }
-
             // if the data is validated, then capture it
             $post = $this->validator->getValidated();
-
             // Create instance of the newsmodel class
             $model = model(NewsModel::class);
-
-            // Save the data to the database using the save() method and the NewsModel class
+            // Save data to db using the save() and the NewsModel class
             $model->save(
             [
                 'title' => $post['title'],
@@ -88,7 +86,6 @@
                 'body' => $post['body']
                 ]
             );
-
             $data = [
                 'title' => 'Success',
                 'message' => 'Success',
@@ -97,7 +94,6 @@
             return view('templates/header', $data)
                     .view('news/success')
                     .view('templates/footer');
-
         }
 
         // Deleting a specific item
@@ -108,7 +104,6 @@
             // use the model to delete the news
             $model->deleteNews($slug);
         
-            
             // Display the success page if a record is deleted
             $data = [
               'message' => 'Success',
@@ -140,14 +135,12 @@
 
         // Loading the news form with the current data of the selected item to update
         public function update($slug){
-
             helper('form');
-
             /**
              * -------------------- Data Validation -------------------
-             * check if the data is not validated and then redirect the user to the update page
+             * check if the data is not validated and then redirect the user to the 
+             * update page
              */
-
              if(! $this->validate(
                 // Add validation rules (Key => Value format)
                 [
@@ -157,26 +150,16 @@
                 ]
              )){
                 // return user to form input
-                // return $this->new();
                 return $this->loadItemToUpdate($slug);
              }
-
-            // If all the validation checks are sorted, then get the validated data using the validator()
+            // If all the validation checks are sorted, then get the validated data 
+            // using the validator()
             $updated_data = $this->validator->getValidated();
-
-            // Test if capturing updated data from user is possible
-            // echo "New Title: ". $updated_data["title"] ."<br>";
-            // echo "New Body: ". $updated_data["body"] ."<br>";
-            // echo "New Creation Date: ". $updated_data['created_on'] ."<br>";
-
             // Create instance of the newsmodel class
             $model = model(NewsModel::class);
-
             // do the update using the updateNews method
             $model->updateNews($slug, $updated_data);
-
             // return redirect()->to('http://localhost:8080/news');
-
             return $this->index();
         }
 

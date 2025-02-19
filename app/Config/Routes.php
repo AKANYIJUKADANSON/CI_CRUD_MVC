@@ -5,6 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 use App\Controllers\Pages;
 use App\Controllers\ServicesController;
 use App\Controllers\ProductsController;
+use App\Controllers\FormController;
 
 /**
  * @var RouteCollection $routes
@@ -70,3 +71,11 @@ $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'index']);
 
 
+// FormValidate route rule
+// $routes->get('forms/signup', [FormController::class,'signup']);
+
+$routes->get('forms/signup', 'FormController::signup');
+$routes->post('forms/signup', 'FormController::signup');
+
+$routes->get('forms/login', 'FormController::login');
+$routes->post('forms/login', 'FormController::login');
