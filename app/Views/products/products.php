@@ -1,9 +1,16 @@
+<?= $this->extend('layouts/layout.php') ?>
 
-<h1 style="color: orangered; font-size: 40px; text-align: center">Our Products</h1>
-<ul>
-    <?php 
-    $products = explode(", ", $productList);
-    foreach ($products as $product): ?>
-        <li><?php echo $product; ?></li>
-    <?php endforeach; ?>
-</ul>
+<?= $this->section('products') ?>
+    <div class="container">
+        <h1>Our Products</h1>
+
+        <br>
+        <ul type="circle">
+            <li>edocs++ EDMS</li>
+            <li>Mobile and Web Development</li>
+            <li>Archiving Solutions</li>
+            <li>Data Electronic Data Management Consultancy</li>
+        </ul>
+    </div>
+
+<?= $this->endSection() ?>

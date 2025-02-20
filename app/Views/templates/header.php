@@ -3,7 +3,7 @@
 <head>
     <title>edocs++ | <?= esc($title) ?></title>
 
-    <style>
+    <!-- <style>
         .nav li{
             margin-right: 10px; background-color: orangered; padding: 5px 10px; list-style: none; border-radius: 5px; font-weight: bolder;
         }
@@ -65,7 +65,9 @@
         .dashboard .complete{
             background-color: deepskyblue;
         }
-    </style>
+    </style> -->
+
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
 </head>
 <body>
     

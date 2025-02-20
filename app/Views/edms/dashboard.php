@@ -37,6 +37,6 @@
         </div>
     </div>
 
-    <!-- <div class="dashboard-data" style="border: 2px solid re; display: flex; justify-content: center; padding: 10px 20px;">
+
         
     </div> -->
