@@ -1,0 +1,312 @@
+CRITICAL - 2025-02-21 04:55:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/layout.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/layout.php')
+ 2 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/home', [], true)
+ 4 APPPATH\Controllers\Home.php(13): view('pages/home')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+ERROR - 2025-02-21 04:56:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CI_CRUD_MVC\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'edocs', 3306, '', 0)
+#1 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CI_CRUD_MVC\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI_CRUD_MVC\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\CI_CRUD_MVC\app\Models\NewsModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\CI_CRUD_MVC\app\Controllers\NewsController.php(14): App\Models\NewsModel->getNews()
+#8 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(933): App\Controllers\NewsController->index()
+#9 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NewsController))
+#10 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CI_CRUD_MVC\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\CI_CRUD_MVC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\CI_CRUD_MVC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\CI_CRUD_MVC\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CI_CRUD_MVC\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\CI_CRUD_MVC\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CI_CRUD_MVC\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\CI_CRUD_MVC\app\Models\NewsModel.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\CI_CRUD_MVC\app\Controllers\NewsController.php(14): App\Models\NewsModel->getNews()
+#7 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(933): App\Controllers\NewsController->index()
+#8 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NewsController))
+#9 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\CI_CRUD_MVC\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\CI_CRUD_MVC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\CI_CRUD_MVC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\CI_CRUD_MVC\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-02-21 04:56:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: news]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(16): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\NewsController.php(14): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NewsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NewsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 04:56:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/layout.php"
+[Method: GET, Route: news]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/layout.php')
+ 2 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('news/news', [], true)
+ 4 APPPATH\Controllers\NewsController.php(21): view('news/news')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NewsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NewsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+DEBUG - 2025-02-21 04:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 04:58:41 --> CSRF token verified.
+DEBUG - 2025-02-21 04:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-21 05:22:39 --> ErrorException: Undefined variable $news_list
+[Method: GET, Route: edms/edms]
+in APPPATH\Views\news\news.php on line 20.
+ 1 APPPATH\Views\news\news.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $news_list', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\news\\news.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\news\\news.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('news/news', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(12): view('news/news')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 05:27:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/edms/dashboard/.php"
+[Method: GET, Route: edms/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/edms/dashboard/.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/edms/dashboard/', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(7): view('/edms/dashboard/', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard('dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 05:30:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/edms/dashboard/.php"
+[Method: GET, Route: edms/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/edms/dashboard/.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/edms/dashboard/', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(7): view('/edms/dashboard/', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard('dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 05:30:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/edms/dashboard/.php"
+[Method: GET, Route: edms/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/edms/dashboard/.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/edms/dashboard/', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(7): view('/edms/dashboard/', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 05:35:14 --> ErrorException: Undefined variable $titlex
+[Method: GET, Route: edms/dashboard]
+in APPPATH\Views\edms\layouts\layout.php on line 4.
+ 1 APPPATH\Views\edms\layouts\layout.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titlex', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php', 4)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/dashboard', [], true)
+ 6 APPPATH\Controllers\EDMSController.php(7): view('edms/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 05:53:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: edms/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(7): view('layout', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 05:56:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "edms/layouts/layou.php"
+[Method: GET, Route: edms/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edms/layouts/layou.php')
+ 2 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layou', [], true)
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/dashboard', [], true)
+ 4 APPPATH\Controllers\EDMSController.php(7): view('edms/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 08:19:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/edms/departments.php"
+[Method: GET, Route: edms/departments]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/edms/departments.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/edms/departments', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(14): view('/edms/departments', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 08:20:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "edms/departments.php"
+[Method: GET, Route: edms/departments]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edms/departments.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(14): view('edms/departments', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 10:45:00 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 30.
+ 1 APPPATH\Views\edms\departments.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(31): view('edms/departments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 10:47:11 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 30.
+ 1 APPPATH\Views\edms\departments.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(23): view('edms/departments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 11:05:34 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 36.
+ 1 APPPATH\Views\edms\departments.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 36)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(23): view('edms/departments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 17:31:21 --> Error: Call to undefined function set_value()
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 64.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 4 APPPATH\Controllers\EDMSController.php(23): view('edms/departments', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 17:31:24 --> Error: Call to undefined function set_value()
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 64.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 4 APPPATH\Controllers\EDMSController.php(23): view('edms/departments', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-21 17:31:42 --> Error: Call to undefined function set_value()
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 64.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 4 APPPATH\Controllers\EDMSController.php(23): view('edms/departments', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-21 18:08:51 --> CSRF token verified.
+CRITICAL - 2025-02-21 18:08:51 --> CodeIgniter\Validation\Exceptions\ValidationException: "HUMAN RESOURCE" is not a valid rule.
+[Method: POST, Route: edms/departments]
+in SYSTEMPATH\Validation\Validation.php on line 346.
+ 1 SYSTEMPATH\Validation\Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('HUMAN RESOURCE')
+ 2 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('department_name', 'department_name', 'HUMAN RESOURCE', [...], [...], 'department_name')
+ 3 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\EDMSController.php(36): CodeIgniter\Controller->validate([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-21 18:10:28 --> CSRF token verified.
+INFO - 2025-02-21 18:12:00 --> CSRF token verified.

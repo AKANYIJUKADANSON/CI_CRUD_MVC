@@ -1,2 +1,191 @@
 DEBUG - 2025-02-20 08:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-20 08:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-20 11:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-20 11:54:56 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::dashboard(), 0 passed in C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: edms/dashboard]
+in APPPATH\Controllers\FormController.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 11:58:30 --> ErrorException: include(inc/navbar.php): Failed to open stream: No such file or directory
+[Method: GET, Route: edms/dashboard]
+in APPPATH\Views\edms\layouts\layout.php on line 12.
+ 1 APPPATH\Views\edms\layouts\layout.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(inc/navbar.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php', 12)
+ 2 APPPATH\Views\edms\layouts\layout.php(12): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('EDMS/dashboard', [], true)
+ 7 APPPATH\Controllers\EDMSController.php(7): view('EDMS/dashboard', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 12:00:03 --> ErrorException: include(../inc/navbar.php): Failed to open stream: No such file or directory
+[Method: GET, Route: edms/dashboard]
+in APPPATH\Views\edms\layouts\layout.php on line 12.
+ 1 APPPATH\Views\edms\layouts\layout.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../inc/navbar.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php', 12)
+ 2 APPPATH\Views\edms\layouts\layout.php(12): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('EDMS/dashboard', [], true)
+ 7 APPPATH\Controllers\EDMSController.php(7): view('EDMS/dashboard', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 12:03:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "inc/navbar.php"
+[Method: GET, Route: edms/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inc/navbar.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('inc/navbar.php', null, true)
+ 3 APPPATH\Views\edms\layouts\layout.php(12): CodeIgniter\View\View->include('inc/navbar.php')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('EDMS/dashboard', [], true)
+ 8 APPPATH\Controllers\EDMSController.php(7): view('EDMS/dashboard', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 12:07:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "navbar.php"
+[Method: GET, Route: edms/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('navbar.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('navbar', null, true)
+ 3 APPPATH\Views\edms\layouts\layout.php(12): CodeIgniter\View\View->include('navbar')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('EDMS/dashboard', [], true)
+ 8 APPPATH\Controllers\EDMSController.php(7): view('EDMS/dashboard', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 12:10:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/inc/navbar.php"
+[Method: GET, Route: EDMS/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/inc/navbar.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('layouts/inc/navbar', null, true)
+ 3 APPPATH\Views\edms\layouts\layout.php(12): CodeIgniter\View\View->include('layouts/inc/navbar')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/EDMS/dashboard', [], true)
+ 8 APPPATH\Controllers\EDMSController.php(7): view('/EDMS/dashboard', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 12:10:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/inc/navbar.php"
+[Method: GET, Route: EDMS/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/inc/navbar.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('layouts/inc/navbar', null, true)
+ 3 APPPATH\Views\edms\layouts\layout.php(12): CodeIgniter\View\View->include('layouts/inc/navbar')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/EDMS/dashboard', [], true)
+ 8 APPPATH\Controllers\EDMSController.php(7): view('/EDMS/dashboard', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 12:11:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/inc/navbar.php"
+[Method: GET, Route: EDMS/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/inc/navbar.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('layouts/inc/navbar.php', null, true)
+ 3 APPPATH\Views\edms\layouts\layout.php(12): CodeIgniter\View\View->include('layouts/inc/navbar.php')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/EDMS/dashboard', [], true)
+ 8 APPPATH\Controllers\EDMSController.php(7): view('/EDMS/dashboard', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 12:34:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/EDMS/dashboar.php"
+[Method: GET, Route: EDMS/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/EDMS/dashboar.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/EDMS/dashboar', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(7): view('/EDMS/dashboar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 13:22:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/edms/departments/.php"
+[Method: GET, Route: edms/departments/]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/edms/departments/.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/edms/departments/', [], true)
+ 3 APPPATH\Controllers\EDMSController.php(12): view('/edms/departments/', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 13:27:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/layout.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/layout.php')
+ 2 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/home', [], true)
+ 4 APPPATH\Controllers\Home.php(13): view('pages/home')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-20 13:27:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/layout.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/layout.php')
+ 2 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/home', [], true)
+ 4 APPPATH\Controllers\Home.php(13): view('pages/home')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')

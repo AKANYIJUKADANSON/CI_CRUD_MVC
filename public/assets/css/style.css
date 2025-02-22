@@ -1,9 +1,11 @@
-.nav li{
-    margin-right: 10px; background-color: orangered; padding: 5px 10px; list-style: none; border-radius: 5px; font-weight: bolder;
-}
-.nav li a{
-    color: white;
-    text-decoration: none;
+.login-container{
+    border: 2px solid red; 
+    height: 100vh; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/teams-page-bg.jpg); */
 }
 .signupform input{
     border: 2px solid grey;

@@ -5,42 +5,59 @@
     <div class="container">
       <br><br>
 
-    <button style="margin-bottom: 10px; padding: 5px 3px; background-color: deepskyblue; border-radius: 4px; border: none;">
-      <a style="padding: 5px;  color: white; font-size: 15px; text-decoration:none;  font-weight: bolder" href="/news/new">+ Add Post</a>
-    </button>
+    <div class="card">
+      <div class="card-header ">
 
-    <table border="1" class="table table stripped">
+          <a type="button" class="btn text-info btn-light btn-outline-dark b-none float-end d-flex fs-6 fw-bolder"
+          style="text-decoration:none; " href="/news/new">
+            <i class="bi bi-plus-circle-fill text-info me-2"></i>
+            Add Post
+          </a>
+
+
+      </div>
+        <table class="w-100 table table-responsive">
+          <thead>
             <tr>
               <th>#</th>
               <th>Title</th>
               <th>Body</th>
-              <th>Created On</th>
+              <th>Created_On</th>
+              <th class="text-center">Action</th>
             </tr>
-    <?php
-      if(esc($news_list != [])) {
-        foreach($news_list as $news) {
-          ?>
-            <tr>
-              <td><?= esc($news['id']); ?></td>
-              <td><?= esc($news['title']); ?></td>
-              <td><?= esc($news['body']); ?></td>
-              <td><?= esc($news['created_on']); ?></td>
-              <td style="padding: 8px 5px; display: flex;">
-                <a class="bg-success text-white p-1 text-decoration-none me-2 fs-6 rounded fw-bolder"  href="/news/<?= esc($news['id'], 'url') ?>">View</a>
+          </thead>
+          <tbody>
+            <?php
+              if(esc($news_list != [])) {
+                foreach($news_list as $news) {
+                  ?>
+                    <tr>
+                      <td><?= esc($news['id']); ?></td>
+                      <td><?= esc($news['title']); ?></td>
+                      <td><?= esc($news['body']); ?></td>
+                      <td><?= esc($news['created_on']); ?></td>
+                      <td>
+                        <div class="d-flex justify-content-center">
+                          <a class="btn btn-success fw-bolder text-decoration-none text-white me-2" style="font-size: 10px; padding: 1px 2px; border-radius: 4px;"  href="/news/<?= esc($news['id'], 'url') ?>">View</a>
 
-                <a style="padding: 5px; background-color: gray; color: white; text-decoration:none; border-radius: 4px; font-weight: bolder; margin-right: 10px"  href="/news/update/<?= esc($news['id'], 'url') ?>">Update</a>
+                          <a class="btn btn-warning fw-bolder text-decoration-none text-white me-2" style="font-size: 10px; padding: 1px 2px; border-radius: 4px;"  href="/news/update/<?= esc($news['id'], 'url') ?>">Update</a>
 
-                <a style="padding: 5px; background-color: red; color: white; text-decoration:none; border-radius: 4px; font-weight: bolder"  href="/news/delete/<?= esc($news['id'], 'url') ?>">Delete</a>
+                          <a class="btn btn-danger fw-bolder text-decoration-none text-white me-2" style=" font-size: 10px; padding: 1px 2px; border-radius: 4px;"  href="/news/delete/<?= esc($news['id'], 'url') ?>">Delete</a>
+                        </div>
 
-              </td>
-            </tr>
-          <?php
-        }
-      } else {
-        echo '<h3>No news items found</h3>';
-      }
-    ?>
+                      </td>
+                    </tr>
+                  <?php
+                }
+              } else {
+                echo '<h3>No news items found</h3>';
+              }
+            ?>
+          </tbody>
 
-    </table>
+        </table>
+      </div>
+
+    </div>
 
     <?= $this->endSection() ?>

@@ -1,11 +1,9 @@
 
-    <?php
-        // session()->getFlashdata("user");
-        // echo "User Name: ->".$authenticated_user["username"];
-    ?>
+<?= $this->extend('edms/layouts/layout') ?>
+
+<?= $this->section('dashboard') ?>
 
     <div class="dashboard" style="border: 2px solid re; display: flex; justify-content: center; padding: 10px 20px;">
-
         <div class="card scanned">
             <a href="">
               <p>Scanned</p>
@@ -37,6 +35,4 @@
         </div>
     </div>
 
-
-        
-    </div> -->
+<?= $this->endSection()?>

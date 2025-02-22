@@ -68,12 +68,6 @@ use App\Models\AuthModel;
 
         }
 
-        public function dashboard($data){
-            helper('form');
-            return view('templates/header', $data)
-                    .view('edms/dashboard');
-        }
-
         public function login(){
             helper("form");
             // helper("URL");
@@ -100,19 +94,21 @@ use App\Models\AuthModel;
                 if(empty($db_user)){
                     echo 'User name does not exist';
                 }else{
-                    if($user_data['password'] != $db_user['password']){
+                    // Hash the password
+                    if(sha1($user_data['password']) != $db_user['password']){
                         // echo 'Wrong password. Try again';
                         echo 'Wrong password. Try again';
                     }else{
                         $data = [
                             'authenticated_user'=> $db_user,
-                            'title'=> 'Dashboard'
-
+                            'title'=> 'Dashboard',
+                            'message' => 'Success',
+                            'auth'=> true,
                         ];
 
                         // If all the credentials are correct then, access the dashboard
                     
-                        return $this->dashboard($data);
+                        return view('forms/success', $data);
                     }
                 }
             }else{

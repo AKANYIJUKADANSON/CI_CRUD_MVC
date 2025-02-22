@@ -13,6 +13,7 @@ use App\Controllers\EDMSController;
  */
 $routes->get('/', 'Home::index');
 
+
 // Services route
 $routes->get('services', [ServicesController::class, 'index']);
 
@@ -86,5 +87,9 @@ $routes->post('forms/authenticate', 'FormController::authenticate');
  * ----------------- EDMS -------------------------------------
  * ------------------------------------------------------------
  */
-$routes->get('edms/dashboard', [FormController::class,'dashboard']);
+// $routes->get('edms/dashboard', [FormController::class,'dashboard']);
 $routes->get('edms/dashboard', [EDMSController::class,'dashboard']);
+
+// departments
+$routes->get('edms/departments', [EDMSController::class,'departments']);
+$routes->post('/edms/departments', [EDMSController::class,'addDepartments']);

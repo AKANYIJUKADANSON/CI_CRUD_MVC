@@ -18,8 +18,8 @@
             // echo ("Welcome to the all news field");
             // return the views and templates and pass the data
             return view('templates/header', $data)
-            .view('news/news')
-            .view('templates/footer');
+            . view("templates/navbar")
+            .view('news/news');
         }
 
         // displaying single news item

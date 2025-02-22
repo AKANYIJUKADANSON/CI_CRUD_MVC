@@ -5,6 +5,10 @@
 
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="<?= base_url('assets/bootstrap-icons/bootstrap-icons.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/bootstrap-icons/bootstrap-icons.min.css') ?>">
+
 </head>
 <body>
 
@@ -15,9 +19,12 @@
         <?= $this->renderSection('services') ?>
         <?= $this->renderSection('contacts') ?>
         <?= $this->renderSection('news') ?>
+        <?= $this->renderSection('dashboard') ?>
+        <?= $this->renderSection('signup') ?>
+        <?= $this->renderSection('login') ?>
     </div>
 
-<p style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);"><em>&copy; 2022 ObuntuTechnologies</em></p>
+    <!-- <p style="margin-top: 15%; text-align: center"><em>&copy; <?php //echo date('Y') ?> ObuntuTechnologies</em></p> -->
 
 <!-- Bootstrap js -->
  <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
