@@ -30,7 +30,7 @@
               <i class="bi bi-gear-fill  me-2"></i>
               Settings
             </a></li>
-            <li><a class="dropdown-item fw-bolder text-secondary" href="/edms/dashboard">
+            <li><a class="dropdown-item fw-bolder text-secondary" href="/forms/login">
             <i class="bi bi-lock-fill me-2"></i>
             Logout
             </a></li>
