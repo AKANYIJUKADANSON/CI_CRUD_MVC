@@ -2,7 +2,6 @@
 
 <?= $this->section('departments') ?>
 
-
 <div class="containe mt-4 mx-2" style="border: 2px solid re">
 
   <div class="card">

@@ -1,0 +1,439 @@
+DEBUG - 2025-02-24 05:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:09:00 --> CSRF token verified.
+DEBUG - 2025-02-24 05:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:09:12 --> CSRF token verified.
+DEBUG - 2025-02-24 05:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:11:51 --> CSRF token verified.
+DEBUG - 2025-02-24 05:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:25:21 --> CSRF token verified.
+DEBUG - 2025-02-24 05:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:25:55 --> CSRF token verified.
+DEBUG - 2025-02-24 05:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:26:03 --> CSRF token verified.
+DEBUG - 2025-02-24 05:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:26:45 --> CSRF token verified.
+DEBUG - 2025-02-24 05:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-24 05:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 05:46:03 --> CSRF token verified.
+DEBUG - 2025-02-24 05:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 06:53:04 --> CSRF token verified.
+INFO - 2025-02-24 06:55:52 --> CSRF token verified.
+CRITICAL - 2025-02-24 06:55:52 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 45.
+ 1 APPPATH\Controllers\EDMSController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 06:57:01 --> CSRF token verified.
+INFO - 2025-02-24 06:59:56 --> CSRF token verified.
+INFO - 2025-02-24 07:00:33 --> CSRF token verified.
+INFO - 2025-02-24 07:05:12 --> CSRF token verified.
+INFO - 2025-02-24 07:07:24 --> CSRF token verified.
+INFO - 2025-02-24 07:11:25 --> CSRF token verified.
+INFO - 2025-02-24 07:12:00 --> CSRF token verified.
+INFO - 2025-02-24 07:23:56 --> CSRF token verified.
+INFO - 2025-02-24 07:32:06 --> CSRF token verified.
+ERROR - 2025-02-24 07:32:06 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in C:\xampp\htdocs\CI_CRUD_MVC\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CI_CRUD_MVC\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CI_CRUD_MVC\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI_CRUD_MVC\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\CI_CRUD_MVC\app\Models\DepartmentsModel.php(19): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\CI_CRUD_MVC\app\Controllers\EDMSController.php(43): App\Models\DepartmentsModel->getDepartments(Array)
+#8 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+#9 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+#10 C:\xampp\htdocs\CI_CRUD_MVC\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CI_CRUD_MVC\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\CI_CRUD_MVC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\CI_CRUD_MVC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\CI_CRUD_MVC\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-02-24 07:32:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+[Method: POST, Route: edms/departments]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `departments`
+WHERE `code` = :code:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DepartmentsModel.php(19): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\EDMSController.php(43): App\Models\DepartmentsModel->getDepartments([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-24 07:32:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `departments`
+WHERE `code` = (\'HUMAN RESOURCE\',\'HR002\')
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `departments`
+WHERE `code` = (\'HUMAN RESOURCE\',\'HR002\')
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `departments`
+WHERE `code` = :code:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DepartmentsModel.php(19): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\EDMSController.php(43): App\Models\DepartmentsModel->getDepartments([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-24 07:32:06 --> [Caused by] mysqli_sql_exception: Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `departments`
+WHERE `code` = (\'HUMAN RESOURCE\',\'HR002\')
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `departments`
+WHERE `code` = (\'HUMAN RESOURCE\',\'HR002\')
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `departments`
+WHERE `code` = (\'HUMAN RESOURCE\',\'HR002\')
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `departments`
+WHERE `code` = :code:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DepartmentsModel.php(19): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\EDMSController.php(43): App\Models\DepartmentsModel->getDepartments([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 07:48:48 --> CSRF token verified.
+CRITICAL - 2025-02-24 07:48:48 --> ErrorException: Array to string conversion
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 50.
+ 1 APPPATH\Controllers\EDMSController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 07:49:38 --> CSRF token verified.
+INFO - 2025-02-24 07:59:14 --> CSRF token verified.
+INFO - 2025-02-24 08:01:06 --> CSRF token verified.
+CRITICAL - 2025-02-24 08:01:06 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 51.
+ 1 APPPATH\Controllers\EDMSController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 08:01:25 --> CSRF token verified.
+INFO - 2025-02-24 08:07:18 --> CSRF token verified.
+INFO - 2025-02-24 08:07:41 --> CSRF token verified.
+INFO - 2025-02-24 08:08:18 --> CSRF token verified.
+INFO - 2025-02-24 08:15:24 --> CSRF token verified.
+INFO - 2025-02-24 08:17:38 --> CSRF token verified.
+INFO - 2025-02-24 08:19:38 --> CSRF token verified.
+INFO - 2025-02-24 08:20:12 --> CSRF token verified.
+INFO - 2025-02-24 08:23:18 --> CSRF token verified.
+INFO - 2025-02-24 08:24:12 --> CSRF token verified.
+INFO - 2025-02-24 08:25:50 --> CSRF token verified.
+INFO - 2025-02-24 08:28:27 --> CSRF token verified.
+INFO - 2025-02-24 08:29:18 --> CSRF token verified.
+INFO - 2025-02-24 09:10:13 --> CSRF token verified.
+INFO - 2025-02-24 09:11:27 --> CSRF token verified.
+INFO - 2025-02-24 09:11:48 --> CSRF token verified.
+INFO - 2025-02-24 09:12:45 --> CSRF token verified.
+INFO - 2025-02-24 09:14:24 --> CSRF token verified.
+INFO - 2025-02-24 09:14:44 --> CSRF token verified.
+INFO - 2025-02-24 09:15:03 --> CSRF token verified.
+INFO - 2025-02-24 09:15:52 --> CSRF token verified.
+INFO - 2025-02-24 09:16:36 --> CSRF token verified.
+INFO - 2025-02-24 09:17:21 --> CSRF token verified.
+INFO - 2025-02-24 09:18:00 --> CSRF token verified.
+INFO - 2025-02-24 09:19:16 --> CSRF token verified.
+INFO - 2025-02-24 09:29:51 --> CSRF token verified.
+INFO - 2025-02-24 09:41:34 --> CSRF token verified.
+INFO - 2025-02-24 09:47:03 --> CSRF token verified.
+INFO - 2025-02-24 09:47:24 --> CSRF token verified.
+CRITICAL - 2025-02-24 09:47:24 --> ErrorException: Array to string conversion
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 48.
+ 1 APPPATH\Controllers\EDMSController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 09:48:31 --> CSRF token verified.
+INFO - 2025-02-24 09:51:16 --> CSRF token verified.
+CRITICAL - 2025-02-24 09:51:16 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 72.
+ 1 APPPATH\Controllers\EDMSController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 09:53:26 --> CSRF token verified.
+CRITICAL - 2025-02-24 09:53:26 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 49.
+ 1 APPPATH\Controllers\EDMSController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 09:55:29 --> CSRF token verified.
+CRITICAL - 2025-02-24 09:55:29 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 49.
+ 1 APPPATH\Controllers\EDMSController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 09:56:14 --> CSRF token verified.
+CRITICAL - 2025-02-24 09:56:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 53.
+ 1 APPPATH\Controllers\EDMSController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 09:56:53 --> CSRF token verified.
+CRITICAL - 2025-02-24 09:56:53 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 72.
+ 1 APPPATH\Controllers\EDMSController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 09:57:13 --> CSRF token verified.
+INFO - 2025-02-24 09:58:14 --> CSRF token verified.
+INFO - 2025-02-24 09:59:47 --> CSRF token verified.
+INFO - 2025-02-24 10:00:28 --> CSRF token verified.
+CRITICAL - 2025-02-24 10:00:29 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 75.
+ 1 APPPATH\Controllers\EDMSController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 10:00:52 --> CSRF token verified.
+INFO - 2025-02-24 10:04:12 --> CSRF token verified.
+CRITICAL - 2025-02-24 10:04:12 --> ErrorException: Array to string conversion
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 75.
+ 1 APPPATH\Controllers\EDMSController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 10:04:42 --> CSRF token verified.
+INFO - 2025-02-24 10:05:44 --> CSRF token verified.
+CRITICAL - 2025-02-24 10:05:44 --> ErrorException: Array to string conversion
+[Method: POST, Route: edms/departments]
+in APPPATH\Controllers\EDMSController.php on line 54.
+ 1 APPPATH\Controllers\EDMSController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Controllers\\EDMSController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 10:06:15 --> CSRF token verified.
+INFO - 2025-02-24 10:09:12 --> CSRF token verified.
+CRITICAL - 2025-02-24 10:16:54 --> ErrorException: Undefined variable $error
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 6.
+ 1 APPPATH\Views\edms\departments.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(26): view('edms/departments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 10:18:21 --> CSRF token verified.
+CRITICAL - 2025-02-24 10:18:21 --> ErrorException: Undefined variable $departments
+[Method: POST, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 36.
+ 1 APPPATH\Views\edms\departments.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departments', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 36)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(66): view('edms/departments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-24 10:22:39 --> ErrorException: Undefined variable $error
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 6.
+ 1 APPPATH\Views\edms\departments.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(26): view('edms/departments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+CRITICAL - 2025-02-24 10:24:40 --> ErrorException: Undefined variable $error
+[Method: GET, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 6.
+ 1 APPPATH\Views\edms\departments.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(26): view('edms/departments', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->departments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 10:25:27 --> CSRF token verified.
+CRITICAL - 2025-02-24 10:25:27 --> ErrorException: Undefined variable $departments
+[Method: POST, Route: edms/departments]
+in APPPATH\Views\edms\departments.php on line 34.
+ 1 APPPATH\Views\edms\departments.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departments', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\departments.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/departments', [], true)
+ 5 APPPATH\Controllers\EDMSController.php(66): view('edms/departments')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 10:37:09 --> CSRF token verified.
+INFO - 2025-02-24 10:38:23 --> CSRF token verified.
+INFO - 2025-02-24 10:39:35 --> CSRF token verified.
+INFO - 2025-02-24 10:40:02 --> CSRF token verified.
+INFO - 2025-02-24 10:42:52 --> CSRF token verified.
+INFO - 2025-02-24 11:39:25 --> CSRF token verified.
+INFO - 2025-02-24 11:44:12 --> CSRF token verified.
+INFO - 2025-02-24 11:45:04 --> CSRF token verified.
+INFO - 2025-02-24 11:45:43 --> CSRF token verified.
+INFO - 2025-02-24 11:46:03 --> CSRF token verified.
+INFO - 2025-02-24 11:46:43 --> CSRF token verified.
+INFO - 2025-02-24 11:47:20 --> CSRF token verified.
+INFO - 2025-02-24 11:47:45 --> CSRF token verified.
+INFO - 2025-02-24 11:48:54 --> CSRF token verified.
+INFO - 2025-02-24 11:49:57 --> CSRF token verified.
+INFO - 2025-02-24 11:50:21 --> CSRF token verified.
+INFO - 2025-02-24 11:50:42 --> CSRF token verified.
+INFO - 2025-02-24 11:50:55 --> CSRF token verified.
+INFO - 2025-02-24 11:51:52 --> CSRF token verified.
+INFO - 2025-02-24 11:52:30 --> CSRF token verified.
+INFO - 2025-02-24 11:57:53 --> CSRF token verified.
+INFO - 2025-02-24 11:58:44 --> CSRF token verified.
+CRITICAL - 2025-02-24 11:58:44 --> ErrorException: Undefined variable $title
+[Method: POST, Route: edms/departments]
+in APPPATH\Views\edms\layouts\layout.php on line 4.
+ 1 APPPATH\Views\edms\layouts\layout.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php', 4)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI_CRUD_MVC\\app\\Views\\edms\\layouts\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('edms/layouts/layout.php', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edms/error', [], true)
+ 6 APPPATH\Controllers\EDMSController.php(66): view('edms/error', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EDMSController->addDepartments()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EDMSController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CI_CRUD_MVC\\public\\index.php')
+INFO - 2025-02-24 11:59:26 --> CSRF token verified.
+INFO - 2025-02-24 12:02:25 --> CSRF token verified.
+INFO - 2025-02-24 12:02:46 --> CSRF token verified.
+INFO - 2025-02-24 12:03:25 --> CSRF token verified.
+DEBUG - 2025-02-24 12:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-24 12:07:16 --> CSRF token verified.
+INFO - 2025-02-24 12:09:53 --> CSRF token verified.
+INFO - 2025-02-24 12:10:46 --> CSRF token verified.
+INFO - 2025-02-24 12:11:30 --> CSRF token verified.
+INFO - 2025-02-24 12:11:59 --> CSRF token verified.
+INFO - 2025-02-24 12:12:49 --> CSRF token verified.
+INFO - 2025-02-24 12:13:15 --> CSRF token verified.
+INFO - 2025-02-24 12:24:20 --> CSRF token verified.
+INFO - 2025-02-24 12:26:55 --> CSRF token verified.
+INFO - 2025-02-24 12:27:33 --> CSRF token verified.
+INFO - 2025-02-24 12:31:38 --> CSRF token verified.

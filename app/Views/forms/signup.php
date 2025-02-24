@@ -7,7 +7,7 @@
 
 <div class="login-container" style="background-image: url('<?=base_url('assets/img/signupbg.jpg')?>');">
     <div class="signupform" style="border: 3px solid grey; margin: auto; border-radius: 5px; width: fit-content; height: fit-content; margin-top: 4%; padding: 20px 40px; background-color: #bbbbbb; ">
-    <h3 style=" text-align: center; ">SIGN UP</h3>
+    <h3 style="text-align: center; ">SIGN UP</h3>
 
         <?= form_open('forms/signup') ?>
         <?= csrf_field() ?>

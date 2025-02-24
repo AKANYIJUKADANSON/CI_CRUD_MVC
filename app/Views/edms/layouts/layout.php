@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>EDMS <?php esc($title) ?></title>
+    <title>EDMS</title>
 
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
@@ -20,6 +20,8 @@
 
         <?= $this->renderSection('dashboard') ?>
         <?= $this->renderSection('departments') ?>
+        <?= $this->renderSection('success') ?>
+        <?= $this->renderSection('error') ?>
 
         <?= $this->renderSection('footer') ?>
     </div>

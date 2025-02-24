@@ -16,7 +16,17 @@
             }
 
             // If the $Slug is given then get the user details
-            return $this->where(['id'=> $id])->first();
+            return $this->where(['code'=> $id])->first();
+        }
+
+        public function checkDeptmtCode($department_code){
+            // If the $Slug is given then get the user details
+            return $this->where(['code'=> $department_code])->first();
+        }
+
+        public function checkDeptmtName($department_name){
+            // If the $Slug is given then get the user details
+            return $this->where(['department_name'=> $department_name])->first();
         }
 
     }
