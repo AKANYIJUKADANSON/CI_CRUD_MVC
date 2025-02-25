@@ -93,3 +93,5 @@ $routes->get('edms/dashboard', [EDMSController::class,'dashboard']);
 // departments
 $routes->get('edms/departments', [EDMSController::class,'departments']);
 $routes->post('/edms/departments', [EDMSController::class,'addDepartments']);
+$routes->get('/edms/activate/(:segment)', [EDMSController::class,'activateButton']);
+$routes->get('/edms/deactivate/(:segment)', [EDMSController::class,'deactivateButton']);

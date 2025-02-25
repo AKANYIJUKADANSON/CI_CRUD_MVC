@@ -18,6 +18,7 @@
     <table class="w-100 table table-responsive">
       <thead>
         <tr>
+          <th>#</th>
           <th>Department</th>
           <th></th>
           <th class="text-center">Action</th>
@@ -32,8 +33,22 @@
                 foreach ($departments as $department) { ?>
                     <tr>
                       
-                      <td> <?= esc($department['code'])." - " ?> <?= esc($department['department_name']) ?> </td>
-                      <td class="text-end"> <?= (esc($department['activation_status'])==1) ? '<a class="btn btn-danger text-decoration-none fw-bolder" style="padding: 1px 3px; background-color: red; color: white; font-size: 12px">Deactive</a>': '<a class="btn btn-success text-decoration-none fw-bolder" style="padding: 1px 3px; background-color: green; color: white; font-size: 12px">Activate</a>' ?> </td>
+                      <td> 
+                        <?= esc($department['id']) ?> 
+                      </td>
+                      <td> 
+                        <?= esc($department['code'])." - " ?> <?= esc($department['department_name']) ?> 
+                      </td>
+
+                      <td class="text-end"> 
+                      <?php if(esc($department['activation_status'])== 0){?>
+                        <a class="btn btn-success text-decoration-none fw-bolder" style="padding: 1px 3px; background-color: green; color: white; font-size: 12px" href="/edms/activate/<?= esc($department["id"], "url") ?>">Activate</a>
+
+                        <?php }else{?>
+                        <a class="btn btn-success text-decoration-none fw-bolder" style="padding: 1px 3px; background-color: red; color: white; font-size: 12px" href="/edms/deactivate/<?= esc($department["id"], "url") ?>">Deactivate</a>
+                        <?php }?>
+
+                      </td>
 
                       <td class="text-center"><i class="bi bi-pencil-square text-secondary"></i></td>
 

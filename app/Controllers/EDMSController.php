@@ -7,8 +7,6 @@ use App\Models\DepartmentsModel;
         public function dashboard(){
             $data['title'] = 'EDMS | Dashboard';
             return view("edms/dashboard", $data);
-
-
         }
 
         public function departments($id = null){
@@ -34,9 +32,7 @@ use App\Models\DepartmentsModel;
 
 
             // ---------------------- Prevent double data entry --------------------------
-            // TODO => Get all the records in the table
-
-            
+           
             $user_data = $this->request->getPost();
 
             $model = model(DepartmentsModel::class);
@@ -95,4 +91,26 @@ use App\Models\DepartmentsModel;
             }
 
         }
+
+        public function activateButton($department_id){
+            $model = model(DepartmentsModel::class);
+
+            $updated_data = array('activation_status'=> 1);
+
+            $model->activateDepartment($department_id, $updated_data);
+            
+            // return $this->departments();
+
+        }
+
+        public function deactivateButton($department_id){
+            $model = model(DepartmentsModel::class);
+
+            $updated_data = array('activation_status'=> 0);
+
+            $model->activateDepartment($department_id, $updated_data);
+            
+            return $this->departments();
+        }
+
     }
