@@ -7,6 +7,7 @@ use App\Controllers\ServicesController;
 use App\Controllers\ProductsController;
 use App\Controllers\FormController;
 use App\Controllers\EDMSController;
+use App\Controllers\UsersController;
 
 /**
  * @var RouteCollection $routes
@@ -90,8 +91,12 @@ $routes->post('forms/authenticate', 'FormController::authenticate');
 // $routes->get('edms/dashboard', [FormController::class,'dashboard']);
 $routes->get('edms/dashboard', [EDMSController::class,'dashboard']);
 
-// departments
+// ----------------- departments
 $routes->get('edms/departments', [EDMSController::class,'departments']);
 $routes->post('/edms/departments', [EDMSController::class,'addDepartments']);
 $routes->get('/edms/activate/(:segment)', [EDMSController::class,'activateButton']);
 $routes->get('/edms/deactivate/(:segment)', [EDMSController::class,'deactivateButton']);
+
+// ----------------  Users
+$routes->get('/edms/auth', [UsersController::class,'users']);
+$routes->post('/edms/create_user', [UsersController::class,'createUser']);

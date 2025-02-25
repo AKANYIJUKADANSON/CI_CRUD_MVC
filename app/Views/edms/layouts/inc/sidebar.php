@@ -49,7 +49,7 @@
 
         <!-- Users -->
         <div class="mt-4">
-            <a class="text-decoration-none mt-4" href="">
+            <a class="text-decoration-none mt-4" href="/edms/auth">
                 <i class="bi bi-people-fill text-secondary fs-6 fw-bolder me-3"></i>
                 <span class="fw-bolder text-secondary fs-6">Users</span>
             </a>

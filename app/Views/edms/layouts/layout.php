@@ -20,6 +20,11 @@
 
         <?= $this->renderSection('dashboard') ?>
         <?= $this->renderSection('departments') ?>
+
+        <!-- Users -->
+        <?= $this->renderSection('users') ?>
+
+
         <?= $this->renderSection('success') ?>
         <?= $this->renderSection('error') ?>
 
