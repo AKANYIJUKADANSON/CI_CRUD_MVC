@@ -95,13 +95,12 @@ $routes->get('edms/dashboard', [EDMSController::class,'dashboard']);
 $routes->get('edms/departments', [EDMSController::class,'departments']);
 $routes->post('/edms/departments', [EDMSController::class,'addDepartments']);
 
+$routes->get('/edms/view/(:segment)', [EDMSController::class,'departments']);
 $routes->get('/edms/update_deptmt/(:segment)', [EDMSController::class,'edit']);
 $routes->put('/edms/update_deptmt/(:segment)', [EDMSController::class,'updateDepartment']);
-
 $routes->get('/edms/activate/(:segment)', [EDMSController::class,'activateButton']);
 $routes->get('/edms/deactivate/(:segment)', [EDMSController::class,'deactivateButton']);
 $routes->get('/edms/delete_dept/(:segment)', [EDMSController::class,'deleteDepartment']);
-
 
 
 // ----------------  Users

@@ -62,6 +62,9 @@
                           </td>
 
                           <td class="text-center">
+
+                            <i class="bi bi-eye-fill text-secondary fs-4 me-2" data-bs-toggle="modal" data-bs-target="#viewUser"></i>
+
                             <a class="text-decoration-none" href="/edms/update/<?= esc($user['id']) ?>">
                               <i class="bi bi-pencil-square text-secondary fs-5 me-2"></i>
                             </a>
@@ -84,7 +87,7 @@
 </div>
 
 
-<!-- Modal -->
+<!-- Add user Modal -->
 <div class="modal fade" id="addUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -123,6 +126,38 @@
       </form>
         <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">CANCEL</button>
       </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- View User Modal -->
+<div class="modal fade" id="viewUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">USER</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label class="form-label fw-bolder">First name</label><br/>
+        <span> <?= esc($user['first_name']); ?></span> <br/><br/>
+
+        <label class="form-label fw-bolder">Last name</label><br/>
+        <span> <?= esc($user['last_name']); ?></span> <br/><br/>
+
+        <label class="form-label fw-bolder">Email</label><br/>
+        <span> <?= esc($user['email']); ?></span> <br/><br/>
+        
+        <label class="form-label fw-bolder">Role</label><br/>
+        <span> <?= esc($user['role']); ?></span> <br/><br/>
+        
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
     </div>
   </div>
 </div>

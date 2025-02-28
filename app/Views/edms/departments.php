@@ -69,6 +69,8 @@
                           </td>
 
                           <td class="text-center">
+                            <i class="bi bi-eye-fill text-secondary fs-4 me-2" data-bs-toggle="modal" data-bs-target="#viewDepartment"></i>
+                          
                             <a class="text-decoration-none" href="/edms/update_deptmt/<?= esc($department['id']) ?>">
                               <i class="bi bi-pencil-square text-secondary fs-5 me-2"></i>
                             </a>
@@ -91,7 +93,7 @@
 </div>
 
 
-  <!-- Modal -->
+  <!-- Add department Modal -->
   <div class="modal fade" id="addDepartment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -120,5 +122,29 @@
     </div>
   </div>
 
+  <!-- View Department Model -->
+  <div class="modal fade" id="viewDepartment" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">DEPARTMENT DETAILS</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+  
+          <label class="form-label fw-bolder">Department Name</label><br>
+          <span> <?= esc($department['department_name']) ?></span> <br><br>
+
+          <label class="form-label fw-bolder">Code</label><br>
+          <span> <?= esc($department['code']) ?></span>             
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <?= $this->endSection() ?>
