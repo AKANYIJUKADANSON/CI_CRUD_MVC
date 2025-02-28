@@ -1,8 +1,8 @@
 <?= $this->extend('edms/layouts/layout.php') ?>
-<?= $this->section('error') ?>
+<?= $this->section('content') ?>
 
 <div class="" style="justify-content: center; display: flex;">
-    <a class="" href="/edms/departments" style=" justify-content: center; display: block; border: 2px solid #e4f4f4; text-decoration: none; padding: 50px 100px; margin: auto; background-color: red; margin-top: 5%">
+    <a class="" href="<?= esc($redirect_page);?>" style=" justify-content: center; display: block; border: 2px solid #e4f4f4; text-decoration: none; padding: 50px 100px; margin: auto; background-color: red; margin-top: 5%">
 
             <h1 class="text-center text-white">404</h1>
         

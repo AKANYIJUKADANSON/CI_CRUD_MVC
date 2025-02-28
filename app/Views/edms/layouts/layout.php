@@ -18,17 +18,8 @@
         <?= $this->include('edms/layouts/inc/navbar') ?>
         <?= $this->include('edms/layouts/inc/sidebar') ?>
 
-        <?= $this->renderSection('dashboard') ?>
-        <?= $this->renderSection('departments') ?>
+        <?= $this->renderSection('content') ?>
 
-        <!-- Users -->
-        <?= $this->renderSection('users') ?>
-
-
-        <?= $this->renderSection('success') ?>
-        <?= $this->renderSection('error') ?>
-
-        <?= $this->renderSection('footer') ?>
     </div>
 
 

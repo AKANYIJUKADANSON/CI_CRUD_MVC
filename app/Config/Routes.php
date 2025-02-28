@@ -94,9 +94,21 @@ $routes->get('edms/dashboard', [EDMSController::class,'dashboard']);
 // ----------------- departments
 $routes->get('edms/departments', [EDMSController::class,'departments']);
 $routes->post('/edms/departments', [EDMSController::class,'addDepartments']);
+
+$routes->get('/edms/update_deptmt/(:segment)', [EDMSController::class,'edit']);
+$routes->put('/edms/update_deptmt/(:segment)', [EDMSController::class,'updateDepartment']);
+
 $routes->get('/edms/activate/(:segment)', [EDMSController::class,'activateButton']);
 $routes->get('/edms/deactivate/(:segment)', [EDMSController::class,'deactivateButton']);
+$routes->get('/edms/delete_dept/(:segment)', [EDMSController::class,'deleteDepartment']);
+
+
 
 // ----------------  Users
-$routes->get('/edms/auth', [UsersController::class,'users']);
+$routes->get('edms/auth', [UsersController::class,'users']);
+// $routes->post('/edms/auth', [UsersController::class,'users']);
 $routes->post('/edms/create_user', [UsersController::class,'createUser']);
+// Updating
+$routes->get('/edms/update/(:segment)', [UsersController::class,'edit']);
+$routes->put('/edms/update/(:segment)', [UsersController::class,'updateUser']);
+$routes->get('/edms/delete/(:segment)', [UsersController::class,'deleteUser']);

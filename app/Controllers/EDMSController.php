@@ -12,7 +12,6 @@ use App\Models\DepartmentsModel;
         public function departments($id = null){
             // The form helper enables the Loading of some form functions
             helper('form');
-
             // Model
             $model = model(DepartmentsModel::class);
 
@@ -28,7 +27,7 @@ use App\Models\DepartmentsModel;
             helper('form');
 
             // Get user data
-            $user_data = $this->request->getPost(['department_name', 'department_code']);
+            // $user_data = $this->request->getPost(['department_name', 'department_code']);
 
 
             // ---------------------- Prevent double data entry --------------------------
@@ -49,7 +48,10 @@ use App\Models\DepartmentsModel;
             if ($deptmt_code_existance != null) {
                 // echo 'Department code "'. $deptmt_code_existance['code'] .'"' . ' is already taken, please try another one';
 
-                $data['message'] = 'Department code "'. $deptmt_code_existance['code'] .'"' . ' is already taken, please use a different code';
+                $data = [
+                    'message' =>'Department code "'. $deptmt_code_existance['code'] .'"' . ' is already taken, please use a different code',
+                    'redirect_page' => '/edms/departments'
+                ];
 
                 return view('edms/error', $data);
 
@@ -92,6 +94,61 @@ use App\Models\DepartmentsModel;
 
         }
 
+        public function edit($id=null){
+
+            $model = model(DepartmentsModel::class);
+            $data['department'] = $model->getDepartments($id);
+            
+            return view('/edms/update_deptmt', $data);
+        }
+
+        public function updateDepartment($department_id){
+            helper('form');
+
+            // ---------------------- Prevent double data entry --------------------------
+
+            $user_data = $this->request->getPost();
+
+            $model = model(DepartmentsModel::class);
+
+            //check if user data was validated and if not redirect to the department page
+            if(! $this->validateData($user_data, [
+                'department_name'=> 'required',
+                'department_code'=> 'required|min_length[4]|max_length[6]',
+            ])){
+
+
+                $data = [
+                    'status' => "Department update error",
+                    'color' => 'danger',
+                    'icon' => 'exclamation-triangle-fill'
+                ];
+    
+                session()->setFlashdata($data);
+                return $this->departments($id=null);
+            }
+
+            // Get validated data
+            $updated_data = $this->validator->getValidated();
+
+            // Save the data
+            $model = model(DepartmentsModel::class);
+            $model->updateDepartment($department_id, $updated_data);
+
+
+            $data = [
+                'status' => 'Department updated successfully',
+                'color' => 'success',
+                'icon' => 'bi bi-building-fill-check'
+            ];
+
+            session()->setFlashdata($data);
+            return $this->departments($id=null);
+
+            
+
+        }
+
         public function activateButton($department_id){
             $model = model(DepartmentsModel::class);
 
@@ -99,7 +156,15 @@ use App\Models\DepartmentsModel;
 
             $model->activateDepartment($department_id, $updated_data);
             
-            // return $this->departments();
+            $data = [
+                'status' => "Department activated successfully",
+                'color' => 'success',
+                'icon' => 'bi bi-check-square'
+            ];
+
+            session()->setFlashdata($data);
+        
+            return redirect()->to('/edms/departments');
 
         }
 
@@ -110,7 +175,31 @@ use App\Models\DepartmentsModel;
 
             $model->activateDepartment($department_id, $updated_data);
             
-            return $this->departments();
+            $data = [
+                'status' => "Department deactivated successfully",
+                'color' => 'success',
+                'icon' => 'bi bi-check-square'
+            ];
+
+            session()->setFlashdata($data);
+        
+            return redirect()->to('/edms/departments');
+        }
+
+        public function deleteDepartment($department_id=null){
+            // echo "Item to delete id: ".$id;
+
+            $model = model(DepartmentsModel::class);
+
+            $model->deleteDepartment($department_id);
+            $data = [
+                'status' => "Department deleted successfully",
+                'color' => 'success',
+                'icon' => 'bi bi-building-fill-dash'
+            ];
+
+            session()->setFlashdata($data);
+            return redirect()->to('/edms/departments'); 
         }
 
     }

@@ -1,8 +1,8 @@
 <?= $this->extend('edms/layouts/layout.php') ?>
-<?= $this->section('success') ?>
+<?= $this->section('content') ?>
 
 <div class="" style="justify-content: center; display: flex;">
-    <a class="" href="/edms/departments" style=" justify-content: center; display: block; border: 2px solid #e4f4f4; text-decoration: none; padding: 50px 100px; margin: auto; background-color: green; margin-top: 5%">
+    <a class="" href="<?= esc($redirect_page);?>" style=" justify-content: center; display: block; border: 2px solid #e4f4f4; text-decoration: none; padding: 50px 100px; margin: auto; background-color: green; margin-top: 5%">
         
             <p class="text-white"><?= esc($message);?></p>
 
@@ -13,3 +13,5 @@
 </div>
 
 <?= $this->endSection() ?>
+
+

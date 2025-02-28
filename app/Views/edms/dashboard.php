@@ -1,7 +1,7 @@
 
 <?= $this->extend('edms/layouts/layout') ?>
 
-<?= $this->section('dashboard') ?>
+<?= $this->section('content') ?>
 
     <div class="dashboard" style="border: 2px solid re; display: flex; justify-content: center; padding: 10px 20px;">
         <div class="card scanned">
